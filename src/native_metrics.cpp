@@ -17,6 +17,8 @@ NAN_MODULE_INIT(Init) {
   LoopChecker::Init(target);
 }
 
-NODE_MODULE(native_metrics, Init)
+NODE_MODULE_INIT() {
+    Init(exports);
+}
 
 }
